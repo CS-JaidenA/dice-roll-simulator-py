@@ -23,22 +23,22 @@ while True:
 	print("4. Roll Dice until Snake Eyes")
 	print("5. Exit")
 
-	option: int = int(input("Select an option (1-5): "))
+	option: str = input("Select an option (1-5): ")
 	print() # blank line
 
 	match option:
-		case 1:
+		case '1':
 			roll2Dice()
-		case 2:
+		case '2':
 			for i in range(5):
 				roll2Dice()
-		case 3:
+		case '3':
 			n = int(input("How many rolls would you like? "))
 			print()
 			
 			for i in range(n):
 				roll2Dice()
-		case 4:
+		case '4':
 			count: int = 0
 
 			while True:
@@ -47,7 +47,7 @@ while True:
 				if roll2Dice() == 2:
 					print(f"SNAKE EYES! It took {count} rolls to get snake eyes.")
 					break
-		case 5:
+		case '5':
 			break
 		case _:
 			print("Invalid option. Try again...")
